@@ -1441,9 +1441,7 @@ class Readability implements LoggerAwareInterface
      */
     protected function reinitBody()
     {
-        if (!isset($this->body->childNodes)) {
-            $this->body = $this->dom->createElement('body');
-            $this->body->innerHTML = $this->bodyCache;
-        }
+        $this->body = $this->dom->createElement('body');
+        $this->body->innerHTML = $this->bodyCache;
     }
 }
